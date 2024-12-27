@@ -1,0 +1,151 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    z-index: 100;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .phone {
+    color: #fff;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  
+  .hero {
+    position: relative;
+    height: 100vh;
+    background: url('about-team.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  .hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(1px); 
+    background: rgba(77, 72, 72, 0.5); 
+    z-index: 1;
+  }
+  
+  .hero h1 {
+    font-size: 64px;
+    font-weight: bold;
+    margin: 0;
+    z-index: 2;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-top: 10px;
+    z-index: 2;
+  }
+  @media (max-width: 768px) {
+   
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 20px;
+    }
+  
+    .logo {
+      font-size: 20px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .phone {
+      margin-top: 10px;
+    }
+  
+    /* Секция hero */
+    .hero {
+      padding: 0 20px;
+      text-align: center;
+    }
+  
+    .hero h1 {
+      font-size: 36px;
+    }
+  
+    .hero p {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  
+    /* Уменьшение размытия для производительности */
+    .hero .overlay {
+      backdrop-filter: blur(3px);
+    }
+  }
+  
+  /* ===== Адаптивный дизайн для очень маленьких устройств (например, iPhone SE) ===== */
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 28px;
+    }
+  
+    .hero p {
+      font-size: 12px;
+    }
+  
+    header {
+      padding: 10px;
+    }
+  
+    .logo {
+      font-size: 18px;
+    }
+  
+    nav ul {
+      gap: 5px;
+    }
+  
+    .phone {
+      font-size: 12px;
+      padding: 3px 5px;
+    }
+  }
